@@ -1,0 +1,246 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #ff6f61;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.recipe-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.recipe-card h3 {
+    padding: 15px;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.recipe-card p {
+    padding: 0 15px 15px;
+    margin: 0;
+    color: #666;
+}
+
+.recipe-card button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.recipe-card button:hover {
+    background-color: #ff4a3d;
+}
+
+.recipe-details-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.details-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-btn:hover {
+    color: #ff6f61;
+}
+
+#detail-ingredients {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+#detail-process {
+    margin: 10px 0;
+}
+
+#detail-time {
+    font-weight: bold;
+}
+
+/* Form container styles */
+.form-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.form-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+}
+
+/* Header buttons */
+.header-buttons {
+    margin-top: 10px;
+}
+
+.header-buttons button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header-buttons button:hover {
+    background-color: #ff4a3d;
+}
+
+/* Form elements */
+#recipe-form input,
+#recipe-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#recipe-form button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#recipe-form button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Recipe actions */
+.recipe-actions {
+    display: flex;
+    gap: 5px;
+    padding: 10px;
+}
+
+.recipe-actions button {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.recipe-actions button:nth-child(1) {
+    background-color: #ff6f61;
+    color: white;
+}
+
+.recipe-actions button:nth-child(2) {
+    background-color: #ffcccb;
+}
+
+.recipe-actions button:nth-child(3) {
+    background-color: #add8e6;
+}
+
+/* Wishlist styles */
+.wishlist-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.wishlist-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+}
+
+/* Rating stars */
+.rating span {
+    cursor: pointer;
+    font-size: 24px;
+    color: #ccc;
+    transition: color 0.2s;
+}
+
+.rating span:hover,
+.rating span.active {
+    color: #ffcc00;
+}

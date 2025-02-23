@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Recipe App</h1>
+        <div class="header-buttons">
+            <button id="add-recipe-btn">Add Recipe</button>
+            <button id="view-wishlist-btn">Wishlist</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="recipe-grid">
+            <!-- Recipe cards will be dynamically added here -->
+        </section>
+
+        <section id="add-recipe-form" class="form-container">
+            <div class="form-content">
+                <button id="close-form" class="close-btn">&times;</button>
+                <h2>Add New Recipe</h2>
+                <form id="recipe-form">
+                    <input type="text" id="recipe-title" placeholder="Recipe Title" required>
+                    <input type="url" id="recipe-image" placeholder="Image URL" required>
+                    <textarea id="recipe-ingredients" placeholder="Ingredients (one per line)" required></textarea>
+                    <textarea id="recipe-process" placeholder="Preparation Process" required></textarea>
+                    <input type="text" id="recipe-time" placeholder="Preparation Time" required>
+                    <button type="submit">Add Recipe</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="recipe-details" class="recipe-details-container">
+            <div class="details-content">
+                <button id="close-details" class="close-btn">&times;</button>
+                <h2 id="detail-title"></h2>
+                <p><strong>Ingredients:</strong></p>
+                <ul id="detail-ingredients"></ul>
+                <p><strong>Process:</strong></p>
+                <p id="detail-process"></p>
+                <p><strong>Time:</strong> <span id="detail-time"></span></p>
+            </div>
+        </section>
+
+        <section id="review-form" class="form-container">
+            <div class="form-content">
+                <button id="close-review" class="close-btn">&times;</button>
+                <h2>Leave a Review</h2>
+                <form id="review-form">
+                    <input type="hidden" id="review-recipe-id">
+                    <div class="rating">
+                        <span onclick="setRating(1)">★</span>
+                        <span onclick="setRating(2)">★</span>
+                        <span onclick="setRating(3)">★</span>
+                        <span onclick="setRating(4)">★</span>
+                        <span onclick="setRating(5)">★</span>
+                    </div>
+                    <textarea id="review-comment" placeholder="Your review..." required></textarea>
+                    <button type="submit">Submit Review</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="wishlist-container" class="wishlist-container">
+        <div class="wishlist-content">
+            <button id="close-wishlist" class="close-btn">&times;</button>
+            <h2>Your Wishlist</h2>
+            <div id="wishlist-items"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
